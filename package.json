@@ -11,6 +11,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-community/clipboard": "^1.2.3",
     "dotenv": "^8.2.0",
     "expo": "~38.0.8",
     "expo-constants": "~9.1.1",
