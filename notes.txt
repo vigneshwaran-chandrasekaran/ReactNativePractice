@@ -1,0 +1,16 @@
+
+FlatList vs ScrollView
+
+It's a big difference with FlatList and ScrollView
+
+ScrollView will load items (data in it for scrolling) immediately after component loading.
+So all data will mount into RAM and you can't use hundred or thousand items in it (because of low performance).
+
+But FlatList has a better solution for this issue, it will mount 10 items (by default) to screen,
+if user scroll view so other items will mount. It's a big gain of FlatList instead of ScrollView.
+
+you can use ScrollView in small items (like 100 items) and FlatList fro even 10000 items.
+
+https://stackoverflow.com/questions/55256221/flatlist-vs-scrollview/55256341
+
+-------------------------------------------------------------------------------------------------------------------

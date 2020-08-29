@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import AppSwitch from './app/components/AppSwitch';
+import FlatListExample from './app/examples/FlatListExample';
 
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<AppSwitch />
+			<FlatListExample />
 		</View>
 	);
 }
