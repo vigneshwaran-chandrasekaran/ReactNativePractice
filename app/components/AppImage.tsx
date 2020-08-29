@@ -11,9 +11,12 @@ const AppImage = () => {
 			/> */}
 			<Image
 				style={styles.tinyLogo}
+				blurRadius={2}
 				source={{
 					uri: 'https://reactnative.dev/img/tiny_logo.png',
 				}}
+				onLoadEnd={() => console.log('image loaded')}
+				onPartialLoad={() => console.log('onPartialLoad ')}
 			/>
 		</View>
 	);
