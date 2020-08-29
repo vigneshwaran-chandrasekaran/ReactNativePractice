@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import ScrollViewTest from './app/examples/ScrollViewTest';
+import AppButton from './app/components/AppButton';
 
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<ScrollViewTest />
+			<AppButton />
 		</View>
 	);
 }

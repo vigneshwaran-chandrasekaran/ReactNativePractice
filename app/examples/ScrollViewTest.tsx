@@ -29,7 +29,7 @@ const ScrollViewTest = () => {
 				>
 					<View>
 						<Text>Vigneshwaran</Text>
-						{/* <Text>
+						<Text>
 							Lorem Ipsum is simply dummy text of the printing and
 							typesetting industry. Lorem Ipsum has been the
 							industry's standard dummy text ever since the 1500s,
@@ -93,7 +93,7 @@ const ScrollViewTest = () => {
 							Various versions have evolved over the years,
 							sometimes by accident, sometimes on purpose
 							(injected humour and the like).
-						</Text> */}
+						</Text>
 					</View>
 				</ScrollView>
 			</SafeAreaView>
