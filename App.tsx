@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import FlatListExample from './app/examples/FlatListExample';
+import ImageBG from './app/components/ImageBG';
 
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<FlatListExample />
+			<ImageBG />
 		</View>
 	);
 }
