@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import AppButton from './app/components/AppButton';
+import AppSwitch from './app/components/AppSwitch';
 
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<AppButton />
+			<AppSwitch />
 		</View>
 	);
 }
