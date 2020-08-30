@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import RefreshControlExample from './app/examples/RefreshControlExample';
+import StatusBarExample from './app/examples/StatusBarExample';
 
 export default function App() {
-	return <View style={styles.container}>{<RefreshControlExample />}</View>;
+	return <View style={styles.container}>{<StatusBarExample />}</View>;
 }
 
 const styles = StyleSheet.create({
