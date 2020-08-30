@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import KeyboardAvoidingViewExample from './app/examples/KeyboardAvoidingViewExample';
+import AppModal from './app/components/AppModal';
 
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<KeyboardAvoidingViewExample />
+			<AppModal />
 		</View>
 	);
 }
