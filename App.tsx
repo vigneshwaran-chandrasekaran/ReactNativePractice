@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import ImageBG from './app/components/ImageBG';
+import KeyboardAvoidingViewExample from './app/examples/KeyboardAvoidingViewExample';
 
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<ImageBG />
+			<KeyboardAvoidingViewExample />
 		</View>
 	);
 }
