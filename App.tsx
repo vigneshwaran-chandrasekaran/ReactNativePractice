@@ -1,13 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import AppModal from './app/components/AppModal';
+import PressableExample from './app/examples/PressableExample';
 
 export default function App() {
-	return (
-		<View style={styles.container}>
-			<AppModal />
-		</View>
-	);
+	return <View style={styles.container}>{<PressableExample />}</View>;
 }
 
 const styles = StyleSheet.create({
