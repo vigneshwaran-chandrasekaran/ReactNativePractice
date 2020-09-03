@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import SectionListExample from './app/examples/SectionListExample';
+import AnimatedExample from './app/RNApi/AnimatedExample';
 
 export default function App() {
-	return <View style={styles.container}>{<SectionListExample />}</View>;
+	return <View style={styles.container}>{<AnimatedExample />}</View>;
 }
 
 const styles = StyleSheet.create({
