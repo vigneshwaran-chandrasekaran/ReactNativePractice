@@ -1,14 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 
 const AppText = () => {
 	return (
 		<View>
-			<Text>AppText</Text>
+			<Text style={styles.baseText}>AppText</Text>
+			<Text dataDetectorType={'email'}>mailText@gmail.com</Text>
 		</View>
 	);
 };
 
 export default AppText;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+	baseText: {
+		fontFamily: Platform.OS === 'android' ? 'monospace' : 'Avenir',
+	},
+});
