@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import AppText from './app/components/AppText';
+import SectionListExample from './app/examples/SectionListExample';
 
 export default function App() {
-	return <View style={styles.container}>{<AppText />}</View>;
+	return <View style={styles.container}>{<SectionListExample />}</View>;
 }
 
 const styles = StyleSheet.create({
