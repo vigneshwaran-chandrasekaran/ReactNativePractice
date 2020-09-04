@@ -24,7 +24,7 @@ const AnimatedBallExample = () => {
 
     /**
      * we can store the animation in variable,
-     * later we can start the animation.
+     * later we can start(use) the animation.
      */
     const moveLeft =   Animated.timing(leftValue, {
         toValue: 0,
@@ -55,6 +55,21 @@ const AnimatedBallExample = () => {
         moveLeft.start()
     }
 
+
+    function springTheBall() {
+        /**
+         * leftValue i.e, first param in the method is value want to change,
+         * next object is what you want to change.
+         * 
+         * this is for both spring and timing
+         */
+        Animated.spring(leftValue, {
+            toValue: 200,
+            useNativeDriver:false
+        }).start()
+    }
+
+
     return (
         <View style={styles.container}>
             <Animated.View style={[styles.ball, {marginLeft:leftValue}]} /> 
@@ -63,6 +78,9 @@ const AnimatedBallExample = () => {
             </TouchableOpacity>
             <TouchableOpacity onPress={goLeft}>
                 <Text>Go left</Text> 
+            </TouchableOpacity>
+            <TouchableOpacity onPress={springTheBall}>
+                <Text>Spring</Text> 
             </TouchableOpacity>
         </View>
     )
