@@ -22,11 +22,24 @@ const AnimatedBallExample = () => {
     const leftValue = useState(new Animated.Value(-50))[0];
     const fadeAnim = useRef(new Animated.Value(4)).current;
 
+    /**
+     * we can store the animation in variable,
+     * later we can start the animation.
+     */
+    const moveLeft =   Animated.timing(leftValue, {
+        toValue: 0,
+        duration: 1000,
+        useNativeDriver:false
+    });
+
     console.log('value', leftValue);
     console.log('fadeAnim', fadeAnim);
 
     function moveBall() {
         console.log('moveBall', fadeAnim);
+        /**
+         * start method in same function
+         */
         Animated.timing(leftValue, {
             toValue: 100,
             duration: 1000,
@@ -36,11 +49,10 @@ const AnimatedBallExample = () => {
 
     function goLeft() {
         console.log('goLeft', leftValue);
-        Animated.timing(leftValue, {
-            toValue: 0,
-            duration: 1000,
-            useNativeDriver:false
-        }).start()
+        /**
+         * start method get value from outside
+         */
+        moveLeft.start()
     }
 
     return (
