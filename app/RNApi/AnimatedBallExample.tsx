@@ -44,7 +44,18 @@ const AnimatedBallExample = () => {
             toValue: 100,
             duration: 1000,
             useNativeDriver:false
-        }).start()
+        }).start();
+
+        /**
+         * https://www.youtube.com/watch?v=lsRf_PspjSs&list=PLYxzS__5yYQmdfEyKDrlG5E0F0u7_iIUo&index=9&frags=wn&ab_channel=codedamn
+         * useNativeDriver
+         * true means Native OS driver will take care the animation,
+         * false means Javascript will take care the animation.
+         */
+
+         /**
+          * RN has two main thread, 1. UI, 2. JS
+          */
     }
 
     function goLeft() {
