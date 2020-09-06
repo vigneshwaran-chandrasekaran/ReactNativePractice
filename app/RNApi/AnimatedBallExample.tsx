@@ -42,9 +42,16 @@ const AnimatedBallExample = () => {
          */
         Animated.timing(leftValue, {
             toValue: 100,
-            duration: 1000,
+            duration: 6000,
             useNativeDriver:false
-        }).start();
+        }).start(({ finished }) => {
+            /* completion callback */
+            /**
+             * if animation finished without any interruption, it will return true,
+             * if the animation stoped using stop() method this will return false
+             */
+            console.log('finished status', finished)
+          });
 
         /**
          * https://www.youtube.com/watch?v=lsRf_PspjSs&list=PLYxzS__5yYQmdfEyKDrlG5E0F0u7_iIUo&index=9&frags=wn&ab_channel=codedamn
@@ -80,12 +87,24 @@ const AnimatedBallExample = () => {
         }).start()
     }
 
+    function stopBall() {
+        /**
+         * we can stop animation using stop() method,
+         * the stop method will return false to start() method callback.
+         */
+        Animated.timing(leftValue).stop()
+    }
+
+
 
     return (
         <View style={styles.container}>
             <Animated.View style={[styles.ball, {marginLeft:leftValue}]} /> 
             <TouchableOpacity onPress={moveBall}>
                 <Text>Go right</Text> 
+            </TouchableOpacity>
+            <TouchableOpacity onPress={stopBall}>
+                <Text>Stop</Text> 
             </TouchableOpacity>
             <TouchableOpacity onPress={goLeft}>
                 <Text>Go left</Text> 
