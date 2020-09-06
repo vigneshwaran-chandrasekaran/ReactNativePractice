@@ -14,3 +14,11 @@ you can use ScrollView in small items (like 100 items) and FlatList fro even 100
 https://stackoverflow.com/questions/55256221/flatlist-vs-scrollview/55256341
 
 -------------------------------------------------------------------------------------------------------------------
+good reference links about react native
+
+https://github.com/chnirt/reactnative-best-practice
+https://github.com/jondot/awesome-react-native
+https://github.com/maminio/RN-Scalable-Example
+https://gist.github.com/cdiggins/338a6c31b43f5d88a73bd2aafb4204fb
+
+-------------------------------------------------------------------------------------------------------------------
