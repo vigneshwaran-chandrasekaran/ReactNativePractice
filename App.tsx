@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import AppStateExample from './app/RNApi/AppStateExample';
+import AppearanceExample from './app/RNApi/AppearanceExample';
 
 export default function App() {
-	return <View style={styles.container}>{<AppStateExample />}</View>;
+	return <View style={styles.container}>{<AppearanceExample />}</View>;
 }
 
 const styles = StyleSheet.create({
