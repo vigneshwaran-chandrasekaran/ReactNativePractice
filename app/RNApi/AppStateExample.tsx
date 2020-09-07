@@ -12,12 +12,14 @@ const AppStateExample = () => {
 		 * on component load register the function
 		 */
 		AppState.addEventListener('change', _handleAppStateChange);
+		AppState.addEventListener('blur', _handleAppStateBlur);
 
 		return () => {
 			/**
 			 * on component unload deregister the function
 			 */
 			AppState.removeEventListener('change', _handleAppStateChange);
+			AppState.removeEventListener('blur', _handleAppStateBlur);
 		};
 	}, []);
 
@@ -32,6 +34,15 @@ const AppStateExample = () => {
 		appState.current = nextAppState;
 		setAppStateVisible(appState.current);
 		console.log('AppState', appState.current);
+	};
+
+	const _handleAppStateBlur = () => {
+		/**
+		 * [Android only] Received when the user is not actively interacting with the app.
+		 * Useful in situations when the user pulls down the notification drawer.
+		 * AppState won't change but the blur event will get fired.
+		 */
+		console.log('_handleAppStateBlur', appState);
 	};
 
 	return (
