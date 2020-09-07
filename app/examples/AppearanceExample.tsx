@@ -6,6 +6,10 @@ const AppearanceExample = () => {
 
 	const colorScheme = Appearance.getColorScheme();
 	console.log('colorScheme', colorScheme);
+
+	/**
+	 * we can use useColorScheme hook to get the color scheme
+	 */
 	if (colorScheme === 'dark') {
 		// Use dark color scheme
 		console.log('dark');
