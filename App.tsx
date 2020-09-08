@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import AppearanceExample from './app/RNApi/AppearanceExample';
+import DimensionsExample from './app/RNApi/DimensionsExample';
 
 export default function App() {
-	return <View style={styles.container}>{<AppearanceExample />}</View>;
+	return <View style={styles.container}>{<DimensionsExample />}</View>;
 }
 
 const styles = StyleSheet.create({
