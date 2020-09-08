@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import ShareExample from './app/RNApi/ShareExample';
+import VibrationAPI from './app/RNApi/VibrationAPI';
 
 export default function App() {
-	return <View style={styles.container}>{<ShareExample />}</View>;
+	return <View style={styles.container}>{<VibrationAPI />}</View>;
 }
 
 const styles = StyleSheet.create({
