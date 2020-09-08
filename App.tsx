@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import KeyboardExample from './app/RNApi/KeyboardExample';
+import ShareExample from './app/RNApi/ShareExample';
 
 export default function App() {
-	return <View style={styles.container}>{<KeyboardExample />}</View>;
+	return <View style={styles.container}>{<ShareExample />}</View>;
 }
 
 const styles = StyleSheet.create({
