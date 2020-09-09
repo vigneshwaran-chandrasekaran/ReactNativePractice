@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import VibrationAPI from './app/RNApi/VibrationAPI';
+import { StyleSheet } from 'react-native';
+import Navigation from './app/navigation/Navigation';
 
 export default function App() {
-	return <View style={styles.container}>{<VibrationAPI />}</View>;
+	return <Navigation />;
 }
 
 const styles = StyleSheet.create({

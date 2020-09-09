@@ -30,3 +30,11 @@ https://www.npmjs.com/package/react-native-config
 https://www.npmjs.com/package/react-native-dotenv
 
 -------------------------------------------------------------------------------------------------------------------
+React Navigation
+
+React Native doesn't have a built-in idea of a global history stack like a web browser does
+-- this is where React Navigation enters the story.
+
+'NavigationContainer' is a component which manages our navigation tree and contains the navigation state.
+
+-------------------------------------------------------------------------------------------------------------------
