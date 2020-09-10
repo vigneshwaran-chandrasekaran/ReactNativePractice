@@ -20,6 +20,12 @@ const DetailsScreen = ({ route, navigation }) => {
 				title="Go to Details... again"
 				onPress={() => navigation.navigate('Details')}
 			/>
+			{navigation.canGoBack() && (
+				<Button
+					title="Go back based on canGoBack()"
+					onPress={() => navigation.goBack()}
+				/>
+			)}
 			{/* will go to previous screen */}
 			<Button title="Go back" onPress={() => navigation.goBack()} />
 			{/* will go to top of the stack (first screen) */}

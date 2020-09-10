@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
+	console.log('navigation', navigation);
 	return (
 		<View
 			style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
@@ -21,6 +22,13 @@ const HomeScreen = ({ navigation }) => {
 				title="Go to Home... again"
 				onPress={() => navigation.push('Home')}
 			/>
+			{/* will go to previous screen */}
+			{navigation.canGoBack() && (
+				<Button
+					title="Go back based on canGoBack()"
+					onPress={() => navigation.goBack()}
+				/>
+			)}
 		</View>
 	);
 };
