@@ -9,19 +9,17 @@ const HomeScreen = ({ navigation }) => {
 			<Text>Home Screen abc</Text>
 			<Button
 				title="Go to Details"
-				onPress={() => navigation.navigate('Details')}
+				onPress={() =>
+					navigation.navigate('Details', {
+						itemId: 86,
+						otherParam: 'anything you want here',
+					})
+				}
 			/>
 			{/* By using push we once again add, same route(navigation) in stack */}
 			<Button
 				title="Go to Home... again"
 				onPress={() => navigation.push('Home')}
-			/>
-			{/* will go to previous screen */}
-			<Button title="Go back" onPress={() => navigation.goBack()} />
-			{/* will go to top of the stack (first screen) */}
-			<Button
-				title="Go back to first screen in stack"
-				onPress={() => navigation.popToTop()}
 			/>
 		</View>
 	);
