@@ -28,7 +28,9 @@ const Navigation = () => {
 					name="Details"
 					component={DetailsScreen}
 					options={{ title: 'Overview' }}
+					initialParams={{ itemId: 42, name: 'vigneshwaran' }}
 				/>
+				{/* 'initialParams' used to pass initial params to route */}
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

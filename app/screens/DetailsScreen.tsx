@@ -33,6 +33,17 @@ const DetailsScreen = ({ route, navigation }) => {
 				title="Go back to first screen in stack"
 				onPress={() => navigation.popToTop()}
 			/>
+
+			{/* Screens can also update their params,
+			like they can update their state. The navigation.setParams method lets you update the params of a screen.  */}
+			<Button
+				title="Random itemId param generate using setParams"
+				onPress={() =>
+					navigation.setParams({
+						itemId: Math.floor(Math.random() * 100),
+					})
+				}
+			/>
 		</View>
 	);
 };
