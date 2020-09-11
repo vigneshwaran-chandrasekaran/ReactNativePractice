@@ -18,11 +18,31 @@ const Stack = createStackNavigator();
 const Navigation = () => {
 	return (
 		<NavigationContainer>
-			<Stack.Navigator initialRouteName="Home">
+			<Stack.Navigator
+				initialRouteName="Home"
+				screenOptions={{
+					headerStyle: {
+						backgroundColor: '#ff356b',
+					},
+					headerTintColor: '#fff',
+					headerTitleStyle: {
+						fontWeight: 'bold',
+					},
+				}}
+			>
 				<Stack.Screen
 					name="Home"
 					component={HomeScreen}
-					options={({ route }) => ({ title: route?.params?.name })}
+					options={({ route }) => ({
+						title: route?.params?.name,
+						headerStyle: {
+							backgroundColor: '#f4511e',
+						},
+						headerTintColor: '#fff',
+						headerTitleStyle: {
+							fontWeight: 'bold',
+						},
+					})}
 				/>
 				<Stack.Screen
 					name="Details"
