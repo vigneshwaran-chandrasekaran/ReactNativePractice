@@ -29,6 +29,10 @@ const HomeScreen = ({ navigation }) => {
 					onPress={() => navigation.goBack()}
 				/>
 			)}
+			<Button
+				title="Update the title"
+				onPress={() => navigation.setOptions({ title: 'Updated!' })}
+			/>
 		</View>
 	);
 };

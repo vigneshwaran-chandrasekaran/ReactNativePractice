@@ -22,7 +22,7 @@ const Navigation = () => {
 				<Stack.Screen
 					name="Home"
 					component={HomeScreen}
-					options={{ title: 'House' }}
+					options={({ route }) => ({ title: route?.params?.name })}
 				/>
 				<Stack.Screen
 					name="Details"
