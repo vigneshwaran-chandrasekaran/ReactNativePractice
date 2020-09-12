@@ -1,11 +1,16 @@
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { Button, Image, StyleSheet } from 'react-native';
 import DetailsScreen from '../screens/DetailsScreen';
+import DummyScreen from '../screens/DummyScreen';
 import HomeScreen from '../screens/HomeScreen';
 
+
+
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 /**
  * The casing of the route name doesn't matter --
@@ -23,6 +28,15 @@ function LogoTitle() {
 				uri: 'https://reactnative.dev/img/tiny_logo.png',
 			}}
 		/>
+	);
+}
+
+function Profile() {
+	return (
+		<Tab.Navigator>
+			<Tab.Screen name="Feed" component={DummyScreen} />
+			<Tab.Screen name="Messages" component={DummyScreen} />
+		</Tab.Navigator>
 	);
 }
 
@@ -76,6 +90,7 @@ const Navigation = () => {
 					options={{ title: 'Overview', headerBackTitle: 'Billa' }}
 					initialParams={{ itemId: 42, name: 'vigneshwaran' }}
 				/>
+				<Stack.Screen name="Profile" component={Profile} />
 				{/* 'initialParams' used to pass initial params to route */}
 			</Stack.Navigator>
 		</NavigationContainer>

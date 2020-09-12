@@ -30,6 +30,10 @@ const HomeScreen = ({ navigation }) => {
 				onPress={() => navigation.navigate('Home2')}
 			/>
 			<Button
+				title="Profile"
+				onPress={() => navigation.navigate('Profile')}
+			/>
+			<Button
 				title="Go to Details"
 				onPress={() =>
 					navigation.navigate('Details', {
