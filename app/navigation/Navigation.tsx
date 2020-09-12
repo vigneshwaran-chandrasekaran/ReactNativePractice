@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { Button, Image, StyleSheet } from 'react-native';
 import DetailsScreen from '../screens/DetailsScreen';
 import HomeScreen from '../screens/HomeScreen';
 
@@ -46,6 +46,13 @@ const Navigation = () => {
 					component={HomeScreen}
 					options={{
 						headerTitle: (props) => <LogoTitle {...props} />,
+						headerRight: () => (
+							<Button
+								onPress={() => alert('This is a button!')}
+								title="Info"
+								color="#fff"
+							/>
+						),
 					}}
 				/>
 				<Stack.Screen
@@ -53,6 +60,7 @@ const Navigation = () => {
 					component={HomeScreen}
 					options={({ route }) => ({
 						title: route?.params?.name,
+						headerBackTitle: 'Billa 2',
 						headerStyle: {
 							backgroundColor: '#f4511e',
 						},
@@ -65,7 +73,7 @@ const Navigation = () => {
 				<Stack.Screen
 					name="Details"
 					component={DetailsScreen}
-					options={{ title: 'Overview' }}
+					options={{ title: 'Overview', headerBackTitle: 'Billa' }}
 					initialParams={{ itemId: 42, name: 'vigneshwaran' }}
 				/>
 				{/* 'initialParams' used to pass initial params to route */}
