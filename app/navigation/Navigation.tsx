@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 import DetailsScreen from '../screens/DetailsScreen';
 import HomeScreen from '../screens/HomeScreen';
 
@@ -14,6 +14,17 @@ const Stack = createStackNavigator();
  *
  * The only required configuration for a screen is the 'name' and 'component' props.
  */
+
+function LogoTitle() {
+	return (
+		<Image
+			style={{ width: 50, height: 50 }}
+			source={{
+				uri: 'https://reactnative.dev/img/tiny_logo.png',
+			}}
+		/>
+	);
+}
 
 const Navigation = () => {
 	return (
@@ -30,6 +41,13 @@ const Navigation = () => {
 					},
 				}}
 			>
+				<Stack.Screen
+					name="Home2"
+					component={HomeScreen}
+					options={{
+						headerTitle: (props) => <LogoTitle {...props} />,
+					}}
+				/>
 				<Stack.Screen
 					name="Home"
 					component={HomeScreen}
